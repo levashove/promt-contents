@@ -19,6 +19,8 @@
 
 ## Для лендингов и презентаций
 
+**[ПРОМТ](https://github.com/levashove/promt-contents/blob/main/prompt_seo_3_infostyle_transformer_2_0.yaml)**
+
 Решаем задачу редактуры и SEO-оптимизации текстов без изменения блоков и структуры. Все заголовки, порядок блоков и параграфы остаются на месте — переписывается только содержание.
 
 Что умеет:
@@ -29,4 +31,4 @@
 - создаёт метатеги (если нужно);
 - оптимизирует под нейропоиск (SGE/Y1/AI Overviews).
 
-**[ПРОМТ](https://github.com/levashove/promt-contents/blob/main/prompt_seo_3_infostyle_transformer_2_0.yaml)**
+
