@@ -1,14 +1,6 @@
 ---
 name: seo-wizard
-description: Интерактивный SEO-агент с пошаговым заполнением параметров статьи
-model: sonnet
-activation:
-  - "создать статью"
-  - "seo статья"
-  - "написать статью"
-  - "create article"
-  - "seo wizard"
-  - "помоги написать"
+description: Интерактивный SEO-агент с пошаговым заполнением параметров статьи. Запускается командой /seo-create-article
 ---
 
 # SEO Wizard Agent
