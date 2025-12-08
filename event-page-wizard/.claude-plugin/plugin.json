@@ -1,17 +1,27 @@
 {
   "name": "event-page-wizard",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Интерактивный агент для создания страниц мероприятий в стиле VK Cloud",
   "author": "levashove",
   "repository": "https://github.com/levashove/prompt-contents",
   "license": "MIT",
+  "main": "agents/event-wizard.md",
   "keywords": [
     "events",
     "webinar",
     "conference",
     "meetup",
+    "hackathon",
     "landing",
     "vk-cloud"
+  ],
+  "requires_tools": [
+    "Write",
+    "Read"
+  ],
+  "supported_languages": [
+    "ru",
+    "en"
   ],
   "agents": [
     "agents/event-wizard.md"
@@ -21,5 +31,9 @@
   ],
   "skills": [
     "skills/event-templates.md"
+  ],
+  "examples": [
+    "examples/webinar-simple.md",
+    "examples/conference-full.md"
   ]
 }

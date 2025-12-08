@@ -136,13 +136,13 @@ characteristics:
   format: offline
   audience_size: 30-100
   informal: true
-  
+
 structure:
   - О мероприятии
   - Краткая программа
   - Спикеры
   - Нетворкинг
-  
+
 example_title: "Backend Meetup в Ярославле"
 
 required_blocks:
@@ -150,6 +150,69 @@ required_blocks:
   - title
   - description
   - speakers
+```
+
+### Хакатон (hybrid)
+
+```yaml
+characteristics:
+  duration: 24-72 часа
+  format: hybrid
+  audience_size: 50-500
+  competitive: true
+
+structure:
+  - О мероприятии (тема, призы)
+  - Расписание (старт, чекпоинты, финал)
+  - Треки/номинации
+  - Жюри
+  - Призы
+  - Партнёры
+
+example_title: "VK Hackathon: AI Solutions"
+
+required_blocks:
+  - header
+  - title
+  - description
+  - schedule
+  - tracks
+  - jury
+  - prizes
+
+optional_blocks:
+  - partners
+  - aftermovie
+  - winner_projects
+```
+
+### Демо-день (hybrid)
+
+```yaml
+characteristics:
+  duration: 2-4 часа
+  format: hybrid
+  audience_size: 50-200
+  showcase: true
+
+structure:
+  - О мероприятии
+  - Программа презентаций
+  - Проекты/команды
+  - Жюри/эксперты
+
+example_title: "Demo Day: Выпуск акселератора VK"
+
+required_blocks:
+  - header
+  - title
+  - description
+  - projects
+
+optional_blocks:
+  - jury
+  - partners
+  - aftermovie
 ```
 
 ---
