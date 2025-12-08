@@ -1,0 +1,25 @@
+{
+  "name": "event-page-wizard",
+  "version": "1.0.0",
+  "description": "Интерактивный агент для создания страниц мероприятий в стиле VK Cloud",
+  "author": "levashove",
+  "repository": "https://github.com/levashove/prompt-contents",
+  "license": "MIT",
+  "keywords": [
+    "events",
+    "webinar",
+    "conference",
+    "meetup",
+    "landing",
+    "vk-cloud"
+  ],
+  "agents": [
+    "agents/event-wizard.md"
+  ],
+  "commands": [
+    "commands/create-event.md"
+  ],
+  "skills": [
+    "skills/event-templates.md"
+  ]
+}
