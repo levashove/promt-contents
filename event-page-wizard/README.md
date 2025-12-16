@@ -162,17 +162,16 @@
 
 ```
 event-page-wizard/
-├── .claude-plugin/
-│   └── plugin.json          # Манифест плагина
-├── agents/
-│   └── event-wizard.md      # Главный wizard агент
-├── commands/
-│   └── create-event.md      # Команда запуска
-├── skills/
-│   └── event-templates.md   # Шаблоны VK Cloud
+├── .claude/
+│   ├── agents/
+│   │   └── event-wizard.md      # Главный wizard агент
+│   ├── commands/
+│   │   └── create-event.md      # Команда запуска
+│   └── skills/
+│       └── event-templates.md   # Шаблоны VK Cloud
 ├── examples/
-│   ├── webinar-simple.md    # Пример вебинара
-│   └── conference-full.md   # Пример конференции
+│   ├── webinar-simple.md        # Пример вебинара
+│   └── conference-full.md       # Пример конференции
 └── README.md
 ```
 

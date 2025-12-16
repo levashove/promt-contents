@@ -313,44 +313,30 @@ Comprehensive guidelines для публикации в ведущих бизн�
 ```
 plugins/tech-content-creator/
 ├── README.md                          # Этот файл
-├── agents/                            # 5 специализированных агентов
-│   ├── tech-content-strategist.md
-│   ├── tech-content-writer.md
-│   ├── tech-fact-checker.md
-│   ├── content-editor.md
-│   └── seo-content-optimizer.md
-├── commands/                          # 3 workflow команды
-│   ├── article-workflow.md
-│   ├── trend-research.md
-│   └── draft-article.md
-└── skills/                            # 6 comprehensive skills
-    ├── tech-trends-research/
-    │   ├── SKILL.md
-    │   ├── references/
-    │   │   └── trend-research-brief-template.md
-    │   └── assets/
-    ├── enterprise-storytelling/
-    │   ├── SKILL.md
-    │   ├── references/
-    │   │   └── case-study-template.md
-    │   └── assets/
-    ├── technical-writing-standards/
-    │   ├── SKILL.md
-    │   ├── references/
-    │   │   └── terminology-glossary.md
-    │   └── assets/
-    ├── fact-checking-methodology/
-    │   ├── SKILL.md
-    │   ├── references/
-    │   └── assets/
-    ├── editorial-excellence/
-    │   ├── SKILL.md
-    │   ├── references/
-    │   └── assets/
-    └── media-publishing-guidelines/
-        ├── SKILL.md
-        ├── references/
-        └── assets/
+└── .claude/
+    ├── agents/                        # 5 специализированных агентов
+    │   ├── tech-content-strategist.md
+    │   ├── tech-content-writer.md
+    │   ├── tech-fact-checker.md
+    │   ├── content-editor.md
+    │   └── seo-content-optimizer.md
+    ├── commands/                      # 3 workflow команды
+    │   ├── article-workflow.md
+    │   ├── trend-research.md
+    │   └── draft-article.md
+    └── skills/                        # 6 comprehensive skills
+        ├── tech-trends-research/
+        │   └── SKILL.md
+        ├── enterprise-storytelling/
+        │   └── SKILL.md
+        ├── technical-writing-standards/
+        │   └── SKILL.md
+        ├── fact-checking-methodology/
+        │   └── SKILL.md
+        ├── editorial-excellence/
+        │   └── SKILL.md
+        └── media-publishing-guidelines/
+            └── SKILL.md
 ```
 
 ## Use Cases / Примеры использования

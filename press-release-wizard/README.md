@@ -165,16 +165,18 @@
 
 ```
 press-release-wizard/
-├── agents/
-│   └── press-release-wizard.md   # Основной агент
-├── commands/
-│   └── write-press-release.md    # Команда запуска
-├── skills/
-│   └── press-release-knowledge.md # База знаний
+├── .claude/
+│   ├── agents/
+│   │   └── press-release-wizard.md   # Основной агент
+│   ├── commands/
+│   │   └── write-press-release.md    # Команда запуска
+│   └── skills/
+│       └── press-release-knowledge.md # База знаний
 ├── examples/
-│   ├── product-launch.md         # Пример: запуск продукта
-│   ├── partnership.md            # Пример: партнёрство
-│   └── product-line.md           # Пример: линейка продуктов
+│   ├── product-launch.md             # Пример: запуск продукта
+│   ├── partnership.md                # Пример: партнёрство
+│   └── product-line.md               # Пример: линейка продуктов
+├── prompts/
 └── README.md
 ```
 

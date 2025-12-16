@@ -1,6 +1,6 @@
 # Prompt Contents
 
-Коллекция промптов, агентов и плагинов для Claude Code — инструменты для создания SEO-статей, страниц мероприятий и технического контента.
+Коллекция промптов, агентов и плагинов для Claude Code — инструменты для создания SEO-статей, страниц мероприятий, пресс-релизов, обновления лендингов и технического контента.
 
 **[Канал в Telegram](https://t.me/proitru)** — промты, новости ИИ, техноконтентское
 
@@ -8,13 +8,28 @@
 
 ## Содержание
 
+- [Обзор плагинов](#обзор-плагинов)
 - [Tech Content Creator](#tech-content-creator)
+- [Landing Page Updater](#landing-page-updater)
 - [SEO Content Creator](#seo-content-creator)
 - [Event Page Wizard](#event-page-wizard)
 - [Press Release Wizard](#press-release-wizard)
 - [YAML-промты](#yaml-промты)
 - [Доступные команды](#доступные-команды)
 - [Структура репозитория](#структура-репозитория)
+- [Стандарт структуры плагинов](#стандарт-структуры-плагинов)
+
+---
+
+## Обзор плагинов
+
+| Плагин | Назначение | Команда |
+|--------|------------|---------|
+| **Tech Content Creator** | Создание статей для Forbes, Habr, VC.ru | `/article-workflow`, `/trend-research`, `/draft-article` |
+| **Landing Page Updater** | Обновление текстов лендингов с SEO | `/update-landing` |
+| **SEO Content Creator** | SEO-оптимизированные статьи | `/seo-create-article` |
+| **Event Page Wizard** | Страницы мероприятий | `/create-event` |
+| **Press Release Wizard** | Профессиональные пресс-релизы | `/write-press-release` |
 
 ---
 
@@ -48,6 +63,60 @@
 **Глобальные:** Forbes, Harvard Business Review, MIT Technology Review, TechCrunch, Wired, Ars Technica
 
 **Российские:** Ведомости, РБК, Коммерсантъ, Хабр, VC.ru, CNews
+
+---
+
+## Landing Page Updater
+
+**Расположение:** `landing-updater/`
+
+Интерактивный агент для обновления текстов лендингов с сохранением структуры и SEO-оптимизацией. Работает по принципу «сохраняем структуру — обновляем контент».
+
+### Ключевой принцип
+
+```
+СОХРАНЯЕМ:                 ОБНОВЛЯЕМ:
+- Количество блоков        - Формулировки
+- Количество предложений   - Актуальность данных
+- Иерархию H1->H2->текст   - SEO-оптимизацию
+- Общий смысл              - Устаревшие термины
+```
+
+### Workflow из 7 этапов
+
+```
+┌──────────────────────────────────────────────────────┐
+│  Этап 1: Получение текста (URL, файл, текст)        │
+│  Этап 2: Разбор на блоки (автоматическая сегментация)│
+│  Этап 3: SEO-параметры (ключи, title, description)  │
+│  Этап 4: Референсы и указания                       │
+│  Этап 5: Анализ и предложения по каждому блоку      │
+│  Этап 6: Генерация обновлённого текста              │
+│  Этап 7: Обратная связь и сохранение примера        │
+└──────────────────────────────────────────────────────┘
+```
+
+### Типы блоков
+
+| Тип | Описание |
+|-----|----------|
+| Hero | Главный заголовок H1, подзаголовок, CTA |
+| Promo | Промо-баннер с акцией |
+| Features | Преимущества продукта/сервиса |
+| Solutions | Карточки решений/продуктов |
+| Security | Безопасность, сертификаты, SLA |
+| Trust | Клиенты, партнёры, логотипы |
+| CTA | Call-to-Action блок |
+
+### Команды доработки
+
+| Команда | Действие |
+|---------|----------|
+| `короче блок N` | Сократить конкретный блок |
+| `подробнее блок N` | Расширить блок |
+| `больше SEO` | Добавить ключевых слов |
+| `вернуть блок N` | Откатить к исходному |
+| `сохранить пример` | Сохранить как успешный кейс |
 
 ---
 
@@ -309,6 +378,7 @@ Slash-команды для Claude Code:
 | `/trend-research` | Исследование технологических трендов и контент-возможностей |
 | `/create-event` | Интерактивный wizard для создания страниц мероприятий |
 | `/write-press-release` | Интерактивный wizard для написания пресс-релизов |
+| `/update-landing` | Обновление текста лендинга с сохранением структуры |
 
 ---
 
@@ -317,7 +387,7 @@ Slash-команды для Claude Code:
 ```
 prompt-contents/
 ├── .claude/
-│   └── commands/                    # Slash-команды для Claude Code
+│   └── commands/                        # Глобальные slash-команды
 │       ├── article-workflow.md
 │       ├── seo-create-article.md
 │       ├── draft-article.md
@@ -326,37 +396,100 @@ prompt-contents/
 │       └── write-press-release.md
 │
 ├── plugins/
-│   └── tech-content-creator/        # Плагин создания контента
-│       ├── agents/                  # 5 специализированных агентов
-│       ├── commands/                # Команды плагина
-│       └── skills/                  # 6 навыков с шаблонами
+│   └── tech-content-creator/            # Плагин создания контента
+│       ├── .claude/
+│       │   ├── agents/                  # 5 специализированных агентов
+│       │   ├── commands/                # Команды плагина
+│       │   └── skills/                  # 6 навыков с шаблонами
+│       └── README.md
 │
-├── seo-content-creator/             # SEO wizard плагин
-│   ├── agents/
-│   ├── commands/
-│   └── skills/
+├── landing-updater/                     # Landing Page Updater плагин
+│   ├── .claude/
+│   │   ├── agents/
+│   │   │   └── landing-updater-wizard.md
+│   │   ├── commands/
+│   │   │   └── update-landing.md
+│   │   └── skills/
+│   │       └── landing-knowledge.md
+│   └── README.md
 │
-├── event-page-wizard/               # Event wizard плагин
-│   ├── agents/
-│   ├── commands/
-│   ├── skills/
-│   └── examples/                    # Примеры страниц
+├── seo-content-creator/                 # SEO wizard плагин
+│   ├── .claude/
+│   │   ├── agents/
+│   │   │   └── seo-wizard.md
+│   │   ├── commands/
+│   │   │   └── create-article.md
+│   │   └── skills/
+│   │       └── seo-knowledge.md
+│   └── README.md
 │
-├── press-release-wizard/            # Press Release wizard плагин
-│   ├── agents/
-│   ├── commands/
-│   ├── skills/
-│   └── examples/                    # Примеры пресс-релизов
+├── event-page-wizard/                   # Event wizard плагин
+│   ├── .claude/
+│   │   ├── agents/
+│   │   │   └── event-wizard.md
+│   │   ├── commands/
+│   │   │   └── create-event.md
+│   │   └── skills/
+│   │       └── event-templates.md
+│   ├── examples/                        # Примеры страниц
+│   └── README.md
 │
-├── prompts/                         # YAML-промты
+├── press-release-wizard/                # Press Release wizard плагин
+│   ├── .claude/
+│   │   ├── agents/
+│   │   │   └── press-release-wizard.md
+│   │   ├── commands/
+│   │   │   └── write-press-release.md
+│   │   └── skills/
+│   │       └── press-release-knowledge.md
+│   ├── prompts/
+│   ├── examples/                        # Примеры пресс-релизов
+│   └── README.md
+│
+├── prompts/                             # YAML-промты
 │   ├── prompt_seo_1_analyze_and_build_params.yaml
 │   ├── prompt_seo_2_generate_article.yaml
 │   └── prompt_seo_3_infostyle_transformer_2_0.yaml
 │
-├── articles/                        # Сгенерированные статьи
+├── articles/                            # Сгенерированные статьи
 │
 ├── README.md
 └── CLAUDE.md
+```
+
+---
+
+## Стандарт структуры плагинов
+
+Каждый плагин должен следовать единой структуре:
+
+```
+plugin-name/
+├── .claude/
+│   ├── agents/
+│   │   └── agent-name.md            # Агент с frontmatter
+│   ├── commands/
+│   │   └── command-name.md          # Slash-команда
+│   └── skills/
+│       └── skill-name.md            # База знаний
+├── examples/                         # Примеры (опционально)
+├── prompts/                          # Дополнительные промты (опционально)
+└── README.md                         # Документация плагина
+```
+
+### Стандарт frontmatter агента
+
+```yaml
+---
+name: agent-name
+description: Краткое описание агента на русском
+model: sonnet                         # sonnet | opus | haiku (опционально)
+activation:                           # Триггеры активации (опционально)
+  - "триггерная фраза"
+  - "альтернативный триггер"
+skills:                               # Связанные skills (опционально)
+  - skill-name
+---
 ```
 
 ---

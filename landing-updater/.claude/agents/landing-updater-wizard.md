@@ -1,6 +1,14 @@
 ---
 name: landing-updater-wizard
-description: Интерактивный агент для обновления текстов лендингов VK Cloud с SEO-оптимизацией
+description: Интерактивный агент для обновления текстов лендингов с SEO-оптимизацией
+model: sonnet
+activation:
+  - "обнови лендинг"
+  - "актуализируй текст"
+  - "update landing"
+  - "обновить контент лендинга"
+skills:
+  - landing-knowledge
 ---
 
 # Landing Page Updater Agent

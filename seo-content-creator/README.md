@@ -152,16 +152,14 @@ Meta-данные
 
 ```
 seo-content-creator/
-├── agents/
-│   └── seo-wizard.md      # Описание агента
-├── commands/
-│   └── create-article.md  # Документация команды
-├── skills/
-│   └── seo-knowledge.md   # База знаний SEO
+├── .claude/
+│   ├── agents/
+│   │   └── seo-wizard.md      # Описание агента
+│   ├── commands/
+│   │   └── create-article.md  # Команда запуска
+│   └── skills/
+│       └── seo-knowledge.md   # База знаний SEO
 └── README.md
-
-.claude/commands/
-└── seo-create-article.md  # Рабочая slash-команда
 ```
 
 ## Связанные команды
