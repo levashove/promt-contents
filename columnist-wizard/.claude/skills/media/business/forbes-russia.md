@@ -251,3 +251,11 @@ description: Style guide and examples for writing expert columns in Forbes Russi
 - [ ] Есть actionable insights
 - [ ] Биография автора в правильном формате
 - [ ] Раскрыта аффилиация с компанией
+
+---
+
+## Дополнительные референсы
+
+Смотри коллекцию лучших экспертных колонок 2024-2025 в файлах:
+- `examples/business-media-examples.md` — Forbes, РБК, Ведомости, Коммерсант: структуры, цитируемые эксперты, данные для статей
+- `examples/best-articles-2024.md` — универсальные паттерны успешных публикаций
