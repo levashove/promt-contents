@@ -10,8 +10,8 @@ This command orchestrates the complete article creation process using specialize
 ## Workflow Overview / Обзор процесса
 
 ```
-1. Research & Ideation → 2. Drafting → 3. Fact-Checking → 4. Editing → 5. SEO Optimization
-   (tech-content-strategist)  (tech-content-writer)  (tech-fact-checker)  (content-editor)  (seo-content-optimizer)
+1. Research & Ideation → 2. Drafting → 3. Visual Planning → 4. Fact-Checking → 5. Editing → 6. SEO → 7. Social Amplification → 8. Publication
+   (tech-content-strategist)  (tech-content-writer)  (visual-planning)  (tech-fact-checker)  (content-editor)  (seo-optimizer)  (social-amplification)  (final)
 ```
 
 ## Usage / Использование
@@ -102,12 +102,46 @@ Select which content concept to develop into full article.
 - Supporting materials (case studies, data, quotes)
 - Target word count
 - Specific publication guidelines
+- **Expert persona** (author voice)
+
+#### Expert Personas / Персоны спикеров
+
+Выберите роль автора для консистентного голоса статьи:
+
+| Роль | Фокус | Темы |
+|------|-------|------|
+| **CEO / Генеральный директор** | Стратегическое видение | Бизнес-стратегия, рынок, импортозамещение |
+| **CTO / VP Engineering** | Архитектура, масштаб | Infrastructure, DevOps, Platform engineering |
+| **CPO / Директор по продукту** | Продуктовое развитие | Облачные продукты, Managed Services, PaaS |
+| **CISO / Директор по ИБ** | Кибербезопасность | Security, Zero Trust, 152-ФЗ, ГОСТ Р 57580 |
+| **CDO / Директор по данным** | Data Platform | Big Data, MLOps, Data Mesh, AI/ML |
+| **CFO / Финансовый директор** | Cloud economics | FinOps, TCO, ROI, Budget optimization |
+| **Engineering Lead** | Практический опыт | Разработка, архитектура, best practices |
+
+**Persona Data**:
+```yaml
+persona:
+  name: "[ФИО спикера]"
+  title: "[Должность]"
+  company: "[Компания]"
+  expertise: "[Область экспертизы]"
+  voice_traits:
+    - [Характеристика 1]
+    - [Характеристика 2]
+```
+
+**Влияние на контент**:
+- **Тон**: Соответствует уровню и роли спикера
+- **Глубина**: Техническая vs бизнес в зависимости от роли
+- **Примеры**: Из области экспертизы спикера
+- **Терминология**: Специфичная для домена
 
 **Process**:
-1. **Outline creation**: Writer creates detailed outline for approval
-2. **First draft**: Complete draft following brief
-3. **Self-review**: Writer checks against quality checklist
-4. **Delivery**: Draft with editorial notes
+1. **Persona selection**: Choose or define expert persona
+2. **Outline creation**: Writer creates detailed outline for approval
+3. **First draft**: Complete draft following brief and persona voice
+4. **Self-review**: Writer checks against quality checklist
+5. **Delivery**: Draft with editorial notes
 
 **Outputs / Результаты**:
 - Article outline (for approval)
@@ -154,13 +188,73 @@ Select which content concept to develop into full article.
 - Стиль: аналитический, взвешенный
 - Требуется: экспертный статус автора
 
-### Phase 4: Fact-Checking (Проверка фактов)
+### Phase 4: Visual Planning (Визуальное планирование)
+
+**Purpose**: Определить визуальные элементы для усиления контента
+
+**Inputs / Входные данные**:
+- Draft article from Phase 3
+- Target publication requirements
+
+**Visual Elements Types / Типы визуальных элементов**:
+
+| Тип | Когда использовать | Пример |
+|-----|-------------------|--------|
+| **Диаграмма архитектуры** | Объяснение системы | Cloud architecture, data flow |
+| **Схема процесса** | Пошаговые инструкции | CI/CD pipeline, deployment flow |
+| **Сравнительная таблица** | Сравнение опций | Feature comparison, pricing |
+| **График/Chart** | Данные и статистика | Growth trends, performance metrics |
+| **Инфографика** | Сложные концепции | Security layers, timeline |
+| **Скриншот** | UI/UX демонстрация | Dashboard, configuration |
+| **Code snippet** | Технические примеры | Implementation, config files |
+
+**Process**:
+1. **Scan draft**: Identify places that need visual support
+2. **Prioritize**: Mark must-have vs nice-to-have visuals
+3. **Describe**: Create detailed briefs for each visual
+4. **Specify**: Define dimensions, style, format requirements
+
+**Visual Brief Template**:
+```yaml
+visual:
+  id: "visual-01"
+  type: "architecture-diagram"
+  location: "Section 2, after paragraph 3"
+  purpose: "Show data flow between components"
+  description: |
+    Diagram showing:
+    - User request flow
+    - Load balancer distribution
+    - Database replication
+  style: "Clean, minimal, brand colors"
+  dimensions: "1200x800px"
+  format: "SVG preferred, PNG fallback"
+  priority: "must-have"
+  notes: "Include legend for icons"
+```
+
+**Outputs / Результаты**:
+- Visual content plan with prioritized list
+- Detailed briefs for each visual element
+- Specifications for designer/illustrator
+- Saved to: `output/visuals/[date]-[title-slug]-visual-plan.md`
+
+**For Russian Publications / Для российских изданий**:
+- **Habr**: Обязательны схемы и код для технических статей
+- **VC.ru**: Инфографика повышает engagement
+- **CNews**: Диаграммы архитектуры для enterprise-контента
+- **РБК**: Графики с данными обязательны
+
+---
+
+### Phase 5: Fact-Checking (Проверка фактов)
 
 **Agent**: `tech-fact-checker`
 **Skills**: `fact-checking-methodology`
 
 **Inputs / Входные данные**:
 - Draft article from Phase 3
+- Visual plan from Phase 4
 
 **Process**:
 1. **Identify claims**: Extract all factual claims
@@ -177,7 +271,7 @@ Select which content concept to develop into full article.
 
 **Typical Timeline**: 1-2 days for thorough verification
 
-### Phase 5: Editing (Редактирование)
+### Phase 6: Editing (Редактирование)
 
 **Agent**: `content-editor`
 **Skills**: `editorial-excellence`, `technical-writing-standards`
@@ -202,7 +296,7 @@ Select which content concept to develop into full article.
 
 **Typical Timeline**: 1-2 days for thorough edit
 
-### Phase 6: SEO & Distribution Optimization (SEO и оптимизация)
+### Phase 7: SEO Optimization (SEO-оптимизация)
 
 **Agent**: `seo-content-optimizer`
 **Skills**: `media-publishing-guidelines`
@@ -258,7 +352,131 @@ Select which content concept to develop into full article.
 - VK — охват широкой аудитории
 - LinkedIn — международная экспертиза
 
-### Phase 7: Publication Preparation (Подготовка к публикации)
+### Phase 8: Social Amplification (Подготовка к дистрибуции)
+
+**Purpose**: Подготовить контент для максимального охвата в социальных сетях
+
+**Inputs / Входные данные**:
+- Final optimized article from Phase 7
+- SEO report with headlines and meta
+
+**Social Platforms Strategy / Стратегия по платформам**:
+
+#### Telegram (Основной канал для RU IT-аудитории)
+
+```markdown
+**Формат поста**:
+- Hook (1-2 предложения) — цепляющее начало
+- Key insight (2-3 предложения) — главный тезис
+- Bullet points (3-5) — ключевые выводы
+- CTA + ссылка
+
+**Пример**:
+🔥 [Провокационный факт или вопрос]
+
+[Краткое раскрытие темы]
+
+Что внутри:
+• [Пункт 1]
+• [Пункт 2]
+• [Пункт 3]
+
+👉 Читать: [ссылка]
+
+**Timing**: Вт-Чт, 10:00-12:00 или 18:00-20:00 МСК
+```
+
+#### LinkedIn
+
+```markdown
+**Формат**:
+- Professional hook
+- Personal perspective (1st person)
+- 3-5 key takeaways
+- Question for engagement
+- Link in comments (better reach)
+
+**Timing**: Вт-Чт, 9:00-11:00 local time
+**Hashtags**: 3-5 relevant (#CloudComputing #DevOps #TechLeadership)
+```
+
+#### Twitter/X Thread
+
+```markdown
+**Формат**:
+1/ Hook tweet (compelling question or stat)
+2-8/ Key points (one per tweet)
+9/ Summary + CTA
+10/ Link to full article
+
+**Best practices**:
+- Use numbered format (1/, 2/, etc.)
+- Include visuals in 2-3 tweets
+- End with engagement question
+```
+
+#### Habr (Cross-posting)
+
+```markdown
+- Полная версия или сокращённая с ссылкой на оригинал
+- Адаптация под Habr-аудиторию (больше техники)
+- Canonical URL на оригинал
+```
+
+#### VC.ru (Cross-posting)
+
+```markdown
+- Адаптация под бизнес/продуктовый угол
+- Личный опыт и истории
+- Более разговорный тон
+```
+
+**Process**:
+1. **Adapt content**: Create platform-specific versions
+2. **Create visuals**: Prepare social media images (1200x630 OG, 1080x1080 square)
+3. **Schedule posts**: Plan publication timing for each platform
+4. **Prepare responses**: Draft answers for expected questions/comments
+
+**Outputs / Результаты**:
+- Telegram post (RU)
+- LinkedIn post (EN/RU)
+- Twitter/X thread (EN)
+- Cross-posting versions for Habr/VC.ru
+- Social media images
+- Publication schedule
+- Saved to: `output/social/[date]-[title-slug]-social-kit.md`
+
+**Social Kit Template**:
+```yaml
+social_kit:
+  article_title: "[Title]"
+  publication_date: "YYYY-MM-DD"
+
+  telegram:
+    post_text: "[Full post]"
+    scheduled: "YYYY-MM-DD HH:MM"
+    channel: "@channel_name"
+
+  linkedin:
+    post_text: "[Full post]"
+    hashtags: ["#tag1", "#tag2"]
+    scheduled: "YYYY-MM-DD HH:MM"
+
+  twitter:
+    thread:
+      - "1/ [Tweet 1]"
+      - "2/ [Tweet 2]"
+    scheduled: "YYYY-MM-DD HH:MM"
+
+  images:
+    - og_image: "1200x630px"
+    - square: "1080x1080px"
+    - twitter_card: "1200x675px"
+```
+
+---
+
+### Phase 9: Publication Preparation (Подготовка к публикации)
 
 **Final Checklist**:
 - [ ] All fact-check issues resolved
@@ -337,12 +555,25 @@ content-projects/
     │   ├── [date]-[slug]-draft-v1.md
     │   ├── [date]-[slug]-draft-v2.md
     │   └── [date]-[slug]-outline.md
+    ├── visuals/                              # NEW: Visual Planning
+    │   ├── [date]-[slug]-visual-plan.md
+    │   └── briefs/
+    │       ├── visual-01-architecture.md
+    │       └── visual-02-chart.md
     ├── reviews/
     │   ├── [date]-[slug]-fact-check-report.md
     │   ├── [date]-[slug]-editorial-report.md
     │   └── [date]-[slug]-seo-report.md
     ├── edited/
     │   └── [date]-[slug]-edited-v1.md
+    ├── social/                               # NEW: Social Amplification
+    │   ├── [date]-[slug]-social-kit.md
+    │   ├── telegram-post.md
+    │   ├── linkedin-post.md
+    │   ├── twitter-thread.md
+    │   └── images/
+    │       ├── og-image-1200x630.png
+    │       └── square-1080x1080.png
     └── final/
         └── [slug]/
             ├── [slug]-final.md
@@ -426,6 +657,40 @@ Specify content language:
 /article-workflow --language=en-US     # American English
 /article-workflow --language=en-UK     # British English
 /article-workflow --language=ru        # Russian
+```
+
+### Expert Persona / Персона автора
+
+Specify author voice for consistent tone:
+
+```bash
+/article-workflow --persona=cto        # CTO / VP Engineering voice
+/article-workflow --persona=ciso       # Security expert voice
+/article-workflow --persona=cpo        # Product leader voice
+/article-workflow --persona=cdo        # Data leader voice
+/article-workflow --persona=ceo        # Executive/strategic voice
+/article-workflow --persona=engineer   # Hands-on engineering voice
+```
+
+### Social Amplification / Дистрибуция
+
+Control social media preparation:
+
+```bash
+/article-workflow --social=full        # All platforms (default)
+/article-workflow --social=ru-only     # Telegram + Habr + VC.ru only
+/article-workflow --social=intl-only   # LinkedIn + Twitter only
+/article-workflow --social=none        # Skip social phase
+```
+
+### Visual Planning / Визуальные материалы
+
+Control visual content planning:
+
+```bash
+/article-workflow --visuals=full       # Full visual planning (default)
+/article-workflow --visuals=minimal    # Only must-have visuals
+/article-workflow --visuals=none       # Skip visual planning
 ```
 
 ## Success Metrics / Метрики успеха
