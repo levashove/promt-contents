@@ -246,6 +246,108 @@ Private Cloud:
     - ФСТЭК
     - госсектор
 
+Secure_Cloud:
+  name: "VK Secure Cloud"
+  positioning: "Аттестованная защищённая облачная платформа для ГИС и ИС с повышенными требованиями к безопасности"
+  launch_date: "22 января 2025"
+  description: >
+    Изолированная облачная платформа для проектирования, развития, поддержки
+    и масштабирования государственных информационных систем и систем обработки
+    персональных данных. Построена на кодовой базе VK Cloud.
+
+  certifications:
+    attestation:
+      number: "№3740.00021.2024"
+      date: "16 декабря 2024"
+      gis_class: "К1 (высший класс защищённости)"
+      pd_level: "УЗ-2 (второй уровень защищённости персональных данных)"
+    regulators:
+      - "ФСТЭК России"
+      - "ФСБ России"
+    s3_storage:
+      status: "Сертификат ФСТЭК"
+      trust_level: "4-й уровень доверия"
+      max_capacity: "до 450 ПБ"
+
+  architecture:
+    hardware: "100% отечественное оборудование"
+    import_independence: "Полная импортонезависимость"
+    base_platform: "VK Cloud (сертифицирована ФСТЭК)"
+    security_approach: "Эшелонированная система защиты"
+    isolation: "Изолированная инфраструктура"
+    szi: "Современные сертифицированные СЗИ"
+    encryption:
+      data_at_rest: "Шифрование хранимых данных"
+      data_in_transit: "СКЗИ, сертифицированные ФСБ России"
+
+  target_audience:
+    government:
+      - "Федеральные органы исполнительной власти"
+      - "Региональные органы власти"
+      - "Внебюджетные фонды (ПФР, ФСС, ФОМС)"
+    enterprise:
+      - "Нефтегазовый сектор"
+      - "Промышленные предприятия"
+      - "Финансовые организации"
+      - "Организации с повышенными требованиями к ИБ"
+    systems:
+      - "Государственные информационные системы (ГИС)"
+      - "Информационные системы персональных данных (ИСПДн)"
+      - "Объекты КИИ (в планах)"
+
+  comparison_with_gos_cloud:
+    secure_cloud:
+      management: "Самостоятельное управление"
+      flexibility: "Высокая гибкость настройки"
+      availability: "Коммерческая доступность"
+      onboarding: "Быстрое подключение"
+    gos_cloud:
+      management: "Через Минцифры России"
+      flexibility: "Ограниченная"
+      availability: "По запросу ведомств"
+      onboarding: "Зависит от регламентов"
+
+  services:
+    iaas:
+      - "Виртуальные машины"
+      - "S3-совместимое объектное хранилище"
+      - "Блочные диски"
+      - "Сетевые сервисы"
+    paas:
+      status: "В планах развития"
+      planned:
+        - "Платформенные сервисы для работы с КИИ"
+
+  roadmap:
+    - "Добавление возможности размещения объектов КИИ"
+    - "Запуск PaaS-сервисов для работы с КИИ"
+    - "Расширение функциональности платформы"
+
+  market_interest: >
+    Интерес к платформе проявили крупные государственные заказчики
+    и ведущие организации нефтегазового и промышленного сектора.
+
+  use_cases:
+    - Размещение ГИС класса К1
+    - Обработка персональных данных УЗ-2
+    - Хранение конфиденциальной информации
+    - Цифровая трансформация госорганов
+    - Импортозамещение зарубежных облачных платформ
+
+  keywords:
+    - VK Secure Cloud
+    - Secure Cloud
+    - аттестованное облако
+    - ГИС
+    - государственные информационные системы
+    - ФСТЭК
+    - ФСБ
+    - К1
+    - УЗ-2
+    - защищённое облако
+    - госсектор
+    - импортозамещение
+
 Professional Services:
   description: Команда экспертов для решения технических вопросов в облаке
   use_cases:
@@ -3057,6 +3159,49 @@ regulatory_sources:
     name: "Закон о КИИ"
     effective: "1 января 2025"
     requirement: "Переход госорганов и КИИ на отечественное ПО"
+
+vk_secure_cloud_sources:
+  official_announcement:
+    name: "Анонс VK Secure Cloud"
+    url: "https://habr.com/ru/news/875818/"
+    date: "22 января 2025"
+    type: "пресс-релиз"
+
+  tadviser_product:
+    name: "VK Secure Cloud — карточка продукта"
+    url: "https://www.tadviser.ru/index.php/Продукт:VK_Secure_Cloud"
+    type: "обзор"
+
+  cnews_s3_certification:
+    name: "Объектное хранилище VK Tech получило сертификат ФСТЭК"
+    url: "https://www.cnews.ru/news/line/2024-12-20_obektnoe_hranilishche_razrabotki"
+    date: "20 декабря 2024"
+    type: "новость"
+
+  hitech_gis:
+    name: "VK Tech поможет разместить ГИС в облаке"
+    url: "https://hi-tech.mail.ru/news/121291-vk-tech-pomozhet-razmestit-gosudarstvennye-informacionnye-sistemy-v-oblake/"
+    type: "новость"
+
+  servernews:
+    name: "VK Tech анонсировал Secure Cloud для госорганизаций"
+    url: "https://servernews.ru/1117126"
+    type: "новость"
+
+  computerra:
+    name: "VK Tech представил аттестованную платформу Secure Cloud"
+    url: "https://www.computerra.ru/308503/vk-tech-predstavil-attestovannuyu-oblachnuyu-platformu-secure-cloud/"
+    type: "новость"
+
+  vk_security_services:
+    name: "Об используемых в VK инструментах безопасности и сервисах VK Cloud"
+    url: "https://habr.com/ru/companies/vktech/articles/950412/"
+    type: "статья"
+
+  vk_uz1_certification:
+    name: "VK Cloud подтвердила соответствие УЗ-1"
+    url: "https://vk.company/ru/press/releases/11271/"
+    type: "пресс-релиз"
 ```
 
 ### Отраслевые исследования по кибербезопасности
