@@ -3058,3 +3058,281 @@ regulatory_sources:
     effective: "1 января 2025"
     requirement: "Переход госорганов и КИИ на отечественное ПО"
 ```
+
+### Отраслевые исследования по кибербезопасности
+
+```yaml
+industry_research_reports:
+  # РОССИЙСКИЕ ИССЛЕДОВАНИЯ
+
+  positive_technologies:
+    name: "Positive Technologies"
+    description: "Ежеквартальные отчёты по актуальным киберугрозам"
+    reports:
+      - name: "Актуальные киберугрозы I–II кварталы 2025"
+        url: "https://ptsecurity.com/research/analytics/aktual-nye-kiberugrozy-i-ii-kvartaly-2025-goda/"
+        type: "quarterly"
+      - name: "Актуальные киберугрозы IV квартал 2024 — I квартал 2025"
+        url: "https://ptsecurity.com/research/analytics/aktualnye-kiberugrozy-iv-kvartal-2024-goda-i-kvartal-2025-goda/"
+        type: "quarterly"
+      - name: "Киберугрозы финансовой отрасли: прогноз на 2025–2026"
+        url: "https://www.ptsecurity.com/ru-ru/research/analytics/kiberugrozy-finansovoi-otrasli--prognoz-na-2025-2026-g/"
+        type: "industry"
+      - name: "Российский рынок ИБ: итоги 2024 и прогнозы на 2025"
+        url: "https://ptsecurity.com/ru-ru/research/analytics/rossijskij-rynok-ib-i-ego-rol-v-mirovoj-industrii-itogi-2024-goda-i-prognozy-na-2025/"
+        type: "market"
+    key_stats_2025:
+      - "Рост инцидентов: +13% г/г (Q4 2024)"
+      - "Шифровальщики: 42-49% успешных атак на организации"
+      - "ВПО используется в 66% атак на организации"
+      - "Шпионское ПО: 20% атак"
+      - "ВПО для удалённого управления: 38% атак"
+
+  kaspersky:
+    name: "Лаборатория Касперского"
+    description: "Ежегодные бюллетени безопасности и исследования угроз"
+    reports:
+      - name: "Ландшафт угроз для России и СНГ"
+        url: "https://www.kaspersky.ru/about/press-releases/laboratoriya-kasperskogo-predstavila-masshtabnyj-otchyot-po-landshaftu-kiberugroz-v-rossii-i-sng"
+        type: "regional"
+      - name: "Kaspersky Security Bulletin 2024: Статистика"
+        url: "https://securelist.ru/ksb-2024-statistics/111289/"
+        type: "annual"
+      - name: "Прогноз сложных кибератак 2025"
+        url: "https://www.kaspersky.ru/about/press-releases/laboratoriya-kasperskogo-predstavila-prognoz-razvitiya-slozhnyh-kiberatak-v-2025-godu"
+        type: "forecast"
+      - name: "Финансовые киберугрозы и crimeware 2024"
+        url: "https://securelist.ru/kaspersky-security-bulletin-crimeware-financial-threats-2024/108411/"
+        type: "industry"
+    key_stats_2025:
+      - "500 000 вредоносных файлов ежедневно (рост в 25 раз за 10 лет)"
+      - "93% угроз направлены на Windows"
+      - "+50% вредоносных пакетов в open source за год"
+      - "+33% рост числа троянцев"
+      - "302 млн отражённых атак с интернет-ресурсов за год"
+      - "Топ-3 ransomware: Dcryptor, Lockbit, Conti"
+
+  bizone:
+    name: "BI.ZONE"
+    description: "Годовое исследование российского киберландшафта Threat Zone"
+    reports:
+      - name: "Threat Zone 2025"
+        url: "https://habr.com/ru/news/880130/"
+        type: "annual"
+      - name: "Threat Zone 2024"
+        url: "https://bi.zone/news/predstavlyaem-godovoe-issledovanie-rossiyskogo-kiberlandshafta-threat-zone-2024/"
+        type: "annual"
+      - name: "Аналитический отчёт по угрозам I полугодие 2024"
+        url: "https://bi.zone/news/predstavlyaem-analiticheskiy-otchet-po-ugrozam-i-kiberintsidentam-za-i-polugodie-2024-goda/"
+        type: "semi-annual"
+    key_stats_2025:
+      - "Топ-3 отрасли под атакой: госсектор (15%), финансы (13%), транспорт (11%)"
+      - "67% атак — финансовая мотивация"
+      - "21% атак — шпионаж (рост с 15%)"
+      - "12% атак — хактивизм (рост с 9%)"
+      - "30% инцидентов с шифрованием — через подрядчиков (2025)"
+      - "Минимальное время от проникновения до шифрования: 12.5 минут"
+      - "Максимальное время присутствия до шифрования: 181 день"
+
+  solar_4rays:
+    name: "Solar 4RAYS (ГК «Ростелеком»)"
+    description: "Центр исследования киберугроз, анализ 200+ млрд ИБ-событий ежедневно"
+    reports:
+      - name: "Хроники целевых атак в 1 полугодии 2025"
+        url: "https://habr.com/ru/companies/solarsecurity/articles/936084/"
+        type: "semi-annual"
+      - name: "SOC Forum 2025 аналитика"
+        url: "https://cisoclub.ru/soc-forum-v-citatah-den-3/"
+        type: "conference"
+    key_stats_2025:
+      - "Число хакерских группировок выросло в 2+ раза за 2025"
+      - "35% — доля профессиональных APT-группировок в инфраструктурах"
+      - "18 группировок обнаружено за 10 месяцев (7 новых)"
+      - "63 000+ кибератак в 1 полугодии 2025 (+27% г/г)"
+      - "Промышленность — главная цель (28% инцидентов)"
+      - "90% атак — финансовая прибыль и шпионаж"
+      - "8% атак — хактивизм (снижение с 35% в 2023)"
+
+  # МЕЖДУНАРОДНЫЕ ИССЛЕДОВАНИЯ
+
+  verizon_dbir:
+    name: "Verizon Data Breach Investigations Report (DBIR)"
+    description: "Ежегодный глобальный отчёт по расследованиям утечек данных (18 лет)"
+    reports:
+      - name: "DBIR 2025"
+        url: "https://www.verizon.com/business/resources/reports/dbir/"
+        type: "annual"
+      - name: "DBIR 2025 Executive Summary"
+        url: "https://www.verizon.com/business/resources/reports/2025-dbir-executive-summary.pdf"
+        type: "summary"
+      - name: "DBIR 2025 Finance Snapshot"
+        url: "https://www.verizon.com/business/resources/infographics/2025-dbir-finance-snapshot.pdf"
+        type: "industry"
+      - name: "DBIR 2025 Manufacturing Snapshot"
+        url: "https://www.verizon.com/business/resources/infographics/2025-dbir-manufacturing-snapshot.pdf"
+        type: "industry"
+    key_stats_2025:
+      - "22,052 инцидента, 12,195 подтверждённых утечек (139 стран)"
+      - "30% утечек через третьих лиц (рост в 2 раза)"
+      - "75% системных вторжений связаны с ransomware"
+      - "60% утечек — человеческий фактор"
+      - "22% утечек начались с credential abuse"
+      - "16% утечек начались с фишинга"
+      - "88% web-атак — использование украденных учётных данных"
+      - "Медианный выкуп: $115,000"
+      - "64% жертв не платят выкуп (было 50% два года назад)"
+      - "163% рост атак, связанных со шпионажем"
+      - "54% жертв ransomware имели утечки credentials в infostealer logs"
+
+  ibm_cost_of_breach:
+    name: "IBM Cost of a Data Breach Report"
+    description: "Ежегодное исследование стоимости утечек данных (20 лет)"
+    reports:
+      - name: "Cost of a Data Breach 2025"
+        url: "https://www.ibm.com/reports/data-breach"
+        type: "annual"
+      - name: "Cost of a Data Breach 2024: Financial Industry"
+        url: "https://www.ibm.com/think/insights/cost-of-a-data-breach-2024-financial-industry"
+        type: "industry"
+    key_stats_2025:
+      - "Средняя стоимость утечки: $4.44 млн (снижение на 9% с $4.88 млн)"
+      - "Healthcare — самый дорогой сектор: $7.42 млн"
+      - "241 день — среднее время обнаружения и устранения (9-летний минимум)"
+      - "Shadow AI — фактор в 20% утечек (+$670K к стоимости)"
+      - "16% атак начинаются с фишинга (обогнал stolen credentials)"
+      - "1 из 6 утечек — с использованием AI атакующими"
+      - "37% AI-атак — фишинг"
+      - "35% AI-атак — deepfake impersonation"
+      - "63% компаний не платят выкуп (было 59% в 2024)"
+      - "AI и автоматизация снижают стоимость утечки на $2.2 млн"
+
+  # АНАЛИТИКА РЫНКА ИБ РОССИИ
+
+  russian_ib_market:
+    name: "Аналитика рынка ИБ России"
+    sources:
+      - name: "TAdviser"
+        url: "https://www.tadviser.ru/"
+        type: "market_research"
+      - name: "B1 (ex-EY)"
+        url: "https://b1.ru/insights/news/media-center/b1-russian-information-security-market-survey-press-release-19-march-2025/"
+        type: "market_research"
+      - name: "ЦСР"
+        url: "https://www.forbes.ru/tekhnologii/539994-eksperty-ocenili-ob-em-rynka-informacionnoj-bezopasnosti-rossii-v-369-mlrd-rublej"
+        type: "market_research"
+      - name: "СТРИМ Консалтинг"
+        url: "https://strimconsult.com/research-ib2024-continue"
+        type: "market_research"
+      - name: "Anti-Malware.ru"
+        url: "https://www.anti-malware.ru/analytics/Market_Analysis"
+        type: "market_analysis"
+    key_stats:
+      market_size:
+        - "Объём рынка 2024: 337-339 млрд руб. (+27% г/г)"
+        - "Прогноз 2025: 369-400+ млрд руб."
+        - "Прогноз 2029: 743 млрд руб."
+        - "Прогноз 2030: 681 млрд руб."
+        - "Среднегодовой рост: 14-23% CAGR"
+      structure:
+        - "70% — продукты ИБ"
+        - "30% — услуги ИБ"
+        - "42% продуктов — сетевая и облачная безопасность"
+        - "17% продуктов — решения анализа и контроля угроз"
+        - "17% продуктов — защита конечных точек"
+      corporate:
+        - "Средний бюджет компании на ИБ 2025: 294 млн руб. (+29% г/г)"
+        - "14% — доля ИБ от всего коммерческого ИТ-рынка РФ"
+      leaders:
+        - "Лаборатория Касперского (77.3 млрд руб., +15.7%)"
+        - "Softline — 2 место"
+        - "Лидеры SOC/MSS: Solar, BI-Zone, Инностейдж"
+```
+
+### Ключевая статистика для контента (выжимка)
+
+```yaml
+content_ready_stats:
+  # Для статей о ransomware
+  ransomware:
+    global:
+      - "75% системных вторжений связаны с ransomware (Verizon DBIR 2025)"
+      - "64% жертв не платят выкуп (рост с 50% за 2 года)"
+      - "Медианный выкуп: $115,000"
+    russia:
+      - "42-49% успешных атак на организации — шифровальщики (PT)"
+      - "30% инцидентов с шифрованием — через подрядчиков (BI.ZONE)"
+      - "Минимальное время до шифрования: 12.5 минут"
+
+  # Для статей о человеческом факторе
+  human_factor:
+    stats:
+      - "60% утечек — человеческий фактор (Verizon DBIR 2025)"
+      - "44% утечек в РФ — неумышленные действия сотрудников (InfoWatch)"
+      - "22% утечек начинаются с credential abuse"
+      - "16% утечек начинаются с фишинга"
+
+  # Для статей об угрозах
+  threats:
+    attack_growth:
+      - "Рост атак: +13% г/г (PT Q4 2024)"
+      - "63 000+ кибератак в РФ за полугодие (+27% г/г) (Solar)"
+      - "Число хакерских группировок в РФ выросло в 2+ раза (Solar)"
+    malware:
+      - "500 000 вредоносных файлов ежедневно (рост в 25 раз за 10 лет)"
+      - "ВПО используется в 66% атак на организации"
+      - "93% угроз направлены на Windows"
+    supply_chain:
+      - "30% утечек через третьих лиц (рост в 2 раза)"
+      - "+50% вредоносных пакетов в open source за год"
+
+  # Для статей о стоимости инцидентов
+  cost:
+    global:
+      - "Средняя стоимость утечки: $4.44 млн (IBM 2025)"
+      - "Healthcare: $7.42 млн за инцидент"
+      - "AI и автоматизация снижают стоимость на $2.2 млн"
+    detection:
+      - "241 день — среднее время обнаружения и устранения (9-летний минимум)"
+      - "Максимальное время присутствия до шифрования: 181 день (BI.ZONE)"
+
+  # Для статей о рынке ИБ
+  russian_market:
+    size:
+      - "Рынок ИБ России 2024: 337-339 млрд руб."
+      - "Рынок ИБ России 2025 (прогноз): 369-400+ млрд руб."
+      - "Рост: +27% за 2024 год"
+    corporate:
+      - "Средний бюджет компании на ИБ: 294 млн руб./год"
+      - "14% — доля ИБ от ИТ-рынка РФ"
+
+  # Для статей о трендах
+  trends_2025:
+    ai_threats:
+      - "Shadow AI — фактор в 20% утечек (+$670K к стоимости)"
+      - "1 из 6 утечек — с использованием AI атакующими"
+      - "AI-фишинг письма удвоились"
+    espionage:
+      - "21% атак — шпионаж (рост с 15%)"
+      - "163% рост атак, связанных со шпионажем (Verizon)"
+    apt:
+      - "35% — доля профессиональных APT-группировок"
+      - "18 группировок обнаружено за 10 месяцев (7 новых)"
+
+  # Для статей о защите
+  defense:
+    zero_trust:
+      - "20-30% российских компаний внедряют Zero Trust"
+    devsecops:
+      - "77% компаний внедрили DevSecOps"
+      - "67% интегрировали DevSecOps в пайплайны"
+    mfa:
+      - "MFA блокирует 99.9% автоматизированных атак (Microsoft)"
+    mssp:
+      - "60%+ компаний передавали функции ИБ на аутсорсинг"
+
+usage_guidelines:
+  attribution: "Всегда указывать источник статистики в формате: 'По данным [источник], ...'"
+  freshness: "Использовать данные не старше 12-18 месяцев"
+  context: "Адаптировать глобальную статистику к российскому контексту"
+  verification: "Перед публикацией проверять актуальность ссылок"
+```
