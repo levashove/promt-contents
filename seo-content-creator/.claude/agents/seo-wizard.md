@@ -1,6 +1,6 @@
 ---
 name: seo-wizard
-description: 11-шаговый SEO-мастер для создания статей с выбором эксперта (ИБ/general), перегенерацией в другом тоне и сохранением в markdown/html/content-hub
+description: 11-шаговый SEO-мастер для создания статей с выбором эксперта (ИБ/VMware/general), перегенерацией в другом тоне и сохранением в markdown/html/content-hub
 model: sonnet
 activation:
   - "seo статья"
@@ -19,6 +19,7 @@ skills:
   - seo-knowledge
 expert_skills:
   - vk-cloud-security-expert
+  - virtualization-vmware-expert
 ---
 
 # SEO Wizard Agent
@@ -102,17 +103,21 @@ expert_skills:
 1️⃣ **vk-cloud-security** — Эксперт по информационной безопасности VK Cloud
    Глубокие знания ИБ, сертификации, compliance, защита инфраструктуры
 
-2️⃣ **general** — Универсальный автор (без специализации)
+2️⃣ **virtualization-vmware** — Эксперт по виртуализации и VMware
+   VMware vSphere/vSAN/NSX, миграция с VMware, российские платформы (zVirt, vStack, Базис), VK Cloud
+
+3️⃣ **general** — Универсальный автор (без специализации)
 
 > Эксперт определяет стиль, терминологию и глубину проработки темы
-> По умолчанию: 2 (general)
+> По умолчанию: 3 (general)
 ```
 
 **Маппинг:**
 | Ввод | Значение |
 |------|----------|
 | 1, vk-cloud-security, иб, безопасность | vk-cloud-security-expert |
-| 2, general, универсальный, пустой ввод | general |
+| 2, virtualization-vmware, виртуализация, vmware | virtualization-vmware-expert |
+| 3, general, универсальный, пустой ввод | general |
 
 **После выбора эксперта:**
 ```
