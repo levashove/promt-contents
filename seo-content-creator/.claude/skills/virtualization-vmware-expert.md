@@ -1305,14 +1305,23 @@ facts_with_sources:
     source: "invgate.com"
 
   russian_market:
-    fact: "58% российских компаний в 2025 году продолжают использовать VMware"
-    source: "Исследование «Код Безопасности»"
+    - fact: "58% российских компаний в 2025 году продолжают использовать VMware"
+      source: "Исследование «Код Безопасности»"
 
-    fact: "Доля российских решений — не более 15% установленной базы"
-    source: "Аналитика рынка"
+    - fact: "78% компаний России выбирают российские средства виртуализации"
+      source: "CNews / Код Безопасности, май 2025"
+      url: "https://www.cnews.ru/news/line/2025-05-22_kod_bezopasnosti_78_kompanij"
 
-    fact: "Рынок виртуализации РФ — ₽14,4 млрд в 2024"
-    source: "iKS-Consulting"
+    - fact: "Доля российских решений по установленной базе — не более 15%"
+      source: "TAdviser 2025"
+      url: "https://www.tadviser.ru/index.php/Статья:Российский_рынок_систем_виртуализации._Обзор_TAdviser_2025"
+
+    - fact: "Рынок ПО виртуализации в России в 2024 году — ₽14,4 млрд"
+      source: "IT-World"
+      url: "https://www.it-world.ru/tech/7bko1h9zugowg0kgcsko0ogw444c4k0.html"
+
+    - fact: "Разрыв между предпочтениями (78%) и установленной базой (15%) — признак активной фазы перехода"
+      source: "Аналитический вывод"
 
   vcsp_changes:
     fact: "Broadcom закрывает VCSP 31 октября 2025"
@@ -1423,13 +1432,30 @@ market_stats:
     gartner_prediction: "70% мигрируют 50% нагрузок к 2028"
 
   russia:
-    domestic_share: "60.2% (2024)"
-    market_2025: "19 млрд рублей"
-    market_2031: "51.4 млрд рублей"
+    market_2024:
+      value: "₽14,4 млрд"
+      source: "it-world.ru"
+      url: "https://www.it-world.ru/tech/7bko1h9zugowg0kgcsko0ogw444c4k0.html"
+
+    market_2025: "19 млрд рублей (прогноз)"
+    market_2031: "51.4 млрд рублей (прогноз)"
     cagr: "17.9%"
-    adoption: "30%+ используют российские системы"
+
+    domestic_vendors:
+      installed_base: "Не более 15%"
+      source: "TAdviser"
+      url: "https://www.tadviser.ru/index.php/Статья:Российский_рынок_систем_виртуализации._Обзор_TAdviser_2025"
+
+    preference_for_russian:
+      value: "78% компаний выбирают российские средства виртуализации"
+      source: "CNews / Код Безопасности"
+      url: "https://www.cnews.ru/news/line/2025-05-22_kod_bezopasnosti_78_kompanij"
+      date: "Май 2025"
+
     vmware_usage_2025: "58% российских компаний продолжают использовать VMware"
     source: "Исследование «Код Безопасности»"
+
+    key_insight: "Разрыв между предпочтениями (78% за российское) и фактической установленной базой (15%) показывает активную фазу перехода"
 
   price_increases:
     average: "3-6x"
@@ -1480,6 +1506,21 @@ sources:
 
     - name: "Anti-Malware.ru"
       topics: ["Обзоры российских решений"]
+
+    - name: "TAdviser"
+      topics: ["Российский рынок виртуализации", "обзоры"]
+      url: "https://www.tadviser.ru/index.php/Статья:Российский_рынок_систем_виртуализации._Обзор_TAdviser_2025"
+      stat: "Доля российских решений — не более 15% установленной базы"
+
+    - name: "IT-World"
+      topics: ["Объём рынка виртуализации"]
+      url: "https://www.it-world.ru/tech/7bko1h9zugowg0kgcsko0ogw444c4k0.html"
+      stat: "Рынок ПО виртуализации 2024 — ₽14,4 млрд"
+
+    - name: "CNews / Код Безопасности"
+      topics: ["Предпочтения российских компаний"]
+      url: "https://www.cnews.ru/news/line/2025-05-22_kod_bezopasnosti_78_kompanij"
+      stat: "78% компаний выбирают российские средства виртуализации"
 
   official:
     - name: "VMware Blogs"
